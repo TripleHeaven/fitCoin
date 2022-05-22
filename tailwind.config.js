@@ -22,6 +22,7 @@ module.exports = {
       "7xl": "4rem",
       "6xl": "2.75rem",
       "5xl": "2rem",
+      "4xl": "1.125rem",
     },
     fontFamilty: {
       main: "Segoe UI, Arial, sans-serif",

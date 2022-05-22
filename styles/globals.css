@@ -1,0 +1,22 @@
+@font-face {
+  font-family: MicrogrammaBold;
+  src: url(./fonts/MicrogrammaDBolExt.ttf);
+}
+@font-face {
+  font-family: MicrogrammaRegular;
+  src: url(./fonts/microgrammanormal.ttf);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Segoe UI, Arial, sans-serif;
+  overflow: hidden;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1 {
+  @apply text-gray-700;
+}

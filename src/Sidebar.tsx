@@ -11,7 +11,7 @@ export const Sidebar = () => {
 
   return (
     <>
-      <div className="w-full h-[72px] flex items-center visible sm:hidden px-[16px]">
+      <div className="w-full h-[72px] flex items-center visible sm:hidden px-[16px] py-[12px]">
         <img src="./icons/fitCoin.svg" alt="fitCoin" />
 
         <div className="ml-auto  sm:hidden">

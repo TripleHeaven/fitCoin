@@ -22,19 +22,19 @@ body {
 }
 
 h1 {
-  @apply text-gray-700 text-7xl font-[microgrammaBold] uppercase;
+  @apply text-7xl font-[microgrammaBold] uppercase;
 }
 
 h2 {
-  @apply text-gray-700 text-6xl font-[microgrammaBold] uppercase;
+  @apply text-6xl font-[microgrammaBold] uppercase;
 }
 
 h3 {
-  @apply text-gray-700 text-5xl font-[microgrammaBold] uppercase;
+  @apply text-5xl font-[microgrammaBold] uppercase;
 }
 
 h4 {
-  @apply text-gray-700 text-4xl font-[microgrammaRegular] uppercase;
+  @apply text-4xl font-[microgrammaRegular] uppercase;
 }
 
 [role="button"],

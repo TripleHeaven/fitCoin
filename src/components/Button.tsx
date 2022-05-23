@@ -24,8 +24,9 @@ const ButtonSizes = {
   lg: "px-8 py-3 rounded-lg text-xl",
   md: "px-4 py-2 rounded-md",
   sm: "px-4 py-2 rounded-sm text-sm",
-  xs: "px-3 py-1.5 rounded-sm text-xs font-medium",
-  mobile: "w-full px-4 py-3 flex justify-center rounded-lg",
+  xs: "  rounded-sm text-xs font-medium",
+  mobile:
+    "px-[32px] py-[17.5px] sm:px[29.5px] sm:py-[13.5px] flex justify-center rounded-lg",
   inline: "font-medium",
   iconTop: "flex-col space-y-1 items-center px-3 py-2 rounded-md text-sm",
 } as const;

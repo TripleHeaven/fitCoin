@@ -12,9 +12,11 @@ export const ButtonVariants = {
   danger:
     "focus:outline-none font-[microgrammaRegular]  bg-danger-700 hover:bg-danger-500 focus:bg-danger-500 active:shadow-none ",
   text: "text-primary-main font-[microgrammaRegular]",
+  gradient:
+    "focus:outline-none font-[microgrammaRegular] hover:bg-success-400 active:shadow-none  text-[white] [gradientNormal] rounded-[8px]",
 } as const;
 
-export const ButtonVariantsMap = ButtonVariants;
+export const ButtonVariantsMap = typeof ButtonVariants;
 
 export type ButtonVariants = ValueOf<typeof ButtonVariants>;
 
@@ -43,7 +45,7 @@ export interface ButtonProps {
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   function Button(props, ref) {
     const {
-      variant = ButtonVariantsMap.primary,
+      variant = ButtonVariants.primary,
       size = ButtonSizesMap.mobile,
       children,
       className,
@@ -56,8 +58,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled}
         className={clsx(
           "transition inline-flex items-center relative font-medium disabled:cursor-not-allowed disabled:opacity-50",
-          ButtonVariantsMap.primary,
-          ButtonSizesMap.mobile,
+          variant,
+          variant === ButtonVariants.gradient && "gradientNormal",
+          size,
           className
         )}
         ref={ref}

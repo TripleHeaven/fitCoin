@@ -27,6 +27,21 @@ module.exports = {
     fontFamilty: {
       main: "Segoe UI, Arial, sans-serif",
     },
+    keyframes: {
+      revealLeft: {
+        "0%": { transform: "translate3d(20px,0,0)", opacity: 0 },
+        "100%": { transform: "translate3d(0px,0,0)", opacity: 1 },
+      },
+      revealOpacity: {
+        "0%": { opacity: 0 },
+        "100%": { opacity: 1 },
+      },
+    },
+    animation: {
+      revealLeft: "revealLeft 0.2s ease-out",
+      revealOpacity: "revealOpacity 0.3s ease-out",
+    },
+
     fill: (theme) => ({
       "gray-100": theme("colors.gray.100"),
       "gray-200": theme("colors.gray.200"),

@@ -17,6 +17,10 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+.gradientNormal {
+  background: linear-gradient(107.74deg, #30cfd0 12.12%, #330867 95.64%);
+}
+
 h1 {
   @apply text-gray-700 text-7xl font-[microgrammaBold] uppercase;
 }

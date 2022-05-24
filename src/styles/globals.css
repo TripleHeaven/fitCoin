@@ -11,14 +11,26 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Segoe UI, Arial, sans-serif;
   overflow: hidden;
   height: 100%;
   -webkit-tap-highlight-color: transparent;
 }
 
+.segoeFont {
+  font-family: Segoe UI, Arial, sans-serif;
+}
+
 .gradientNormal {
   background: linear-gradient(107.74deg, #30cfd0 12.12%, #330867 95.64%);
+}
+
+.gradientInverted {
+  border-width: 2px;
+  border-style: solid;
+  background: linear-gradient(1deg, #f8f9fa, #f8f9fa) padding-box,
+    linear-gradient(to right, #30cfd0, #330867) border-box;
+  border-radius: 8px;
+  border: 2px solid transparent;
 }
 
 h1 {
@@ -30,7 +42,7 @@ h2 {
 }
 
 h3 {
-  @apply text-5xl font-[microgrammaBold] uppercase;
+  @apply text-5xl font-[microgrammaRegular] uppercase;
 }
 
 h4 {

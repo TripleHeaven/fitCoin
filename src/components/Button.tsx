@@ -12,7 +12,11 @@ export const ButtonVariants = {
   danger:
     "focus:outline-none font-[microgrammaRegular]  bg-danger-700 hover:bg-danger-500 focus:bg-danger-500 active:shadow-none ",
   text: "text-primary-main font-[microgrammaRegular]",
+  custom:
+    "focus:outline-none  hover:bg-success-400 active:shadow-none rounded-[8px]",
   gradient:
+    "focus:outline-none font-[microgrammaRegular] hover:bg-success-400 active:shadow-none  text-[white] rounded-[8px]",
+  gradientInverted:
     "focus:outline-none font-[microgrammaRegular] hover:bg-success-400 active:shadow-none  text-[white] [gradientNormal] rounded-[8px]",
 } as const;
 
@@ -41,6 +45,7 @@ export interface ButtonProps {
   children?: React.ReactNode;
   className?: string;
   disabled?: boolean;
+  onClick?: () => void;
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -51,23 +56,40 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       className,
       disabled = false,
+      onClick,
       ...other
     } = props;
 
     return (
       <button
         disabled={disabled}
+        onClick={onClick}
         className={clsx(
           "transition inline-flex items-center relative font-medium disabled:cursor-not-allowed disabled:opacity-50",
           variant,
           variant === ButtonVariants.gradient && "gradientNormal",
+          variant === ButtonVariants.gradientInverted && "gradientInverted",
           size,
           className
         )}
         ref={ref}
         {...other}
       >
-        <span className="mx-2">{children}</span>
+        <span
+          className="mx-2"
+          style={
+            variant === ButtonVariants.gradientInverted
+              ? {
+                  background:
+                    "-webkit-linear-gradient(1deg, #30CFD0 12.12% ,#330867 95.64%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }
+              : {}
+          }
+        >
+          {children}
+        </span>
       </button>
     );
   }

@@ -12,10 +12,16 @@ interface ParagraphProps {
   variant?: ParagraphVariant;
   className?: string;
   children?: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
 export const Paragraph: React.FC<ParagraphProps> = ({
   variant = ParagraphVariant.text,
   className,
   children,
-}) => <p className={clsx(variant, className)}>{children}</p>;
+  style,
+}) => (
+  <p className={clsx(variant, className)} style={{ ...style }}>
+    {children}
+  </p>
+);

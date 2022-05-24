@@ -4,6 +4,7 @@ import { Title, TitleVariant } from "components/Title";
 
 export const Hero = () => (
   <div
+    className="px-[17px]"
     style={{
       backgroundImage: "url('./bgs/heroMobile.png')",
       backgroundSize: "100%",
@@ -20,7 +21,7 @@ export const Hero = () => (
       </Title>
     </div>
 
-    <div className="mt-[24px] text-center ">
+    <div className="mt-[24px] text-center">
       <Paragraph className="text-center">
         Fitcoin is a token built on the basis of blockchain technology which
         opens up new possibilities and provides in purchase-to-earn mechanics to

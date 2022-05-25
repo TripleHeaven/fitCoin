@@ -16,7 +16,7 @@ export const RevolutionNutrition = () => (
       <Title className="text-center text-gray-300" variant={TitleVariant.h2}>
         Revolution nutrition
       </Title>
-      <img src="./icons/rnMobile.png" className="mt-[40px]"></img>
+      <img src="./icons/rnMobile.png" className="mt-[40px] mx-auto"></img>
       <div className="flex flex-col gap-[20px]">
         <div className="flex">
           <img src="./icons/Rn1.svg" />
@@ -41,7 +41,7 @@ export const RevolutionNutrition = () => (
         <Button variant={ButtonVariants.gradientInverted} className="mx-auto">
           <div className="flex">
             learn more
-            <img className="ml-[16px]" src="./icons/arrowRightGr.svg" />
+            <img className="ml-[16px] " src="./icons/arrowRightGr.svg" />
           </div>
         </Button>
       </div>

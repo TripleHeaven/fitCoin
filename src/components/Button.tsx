@@ -30,7 +30,7 @@ const ButtonSizes = {
   sm: "px-4 py-2 rounded-sm text-sm",
   xs: "  rounded-sm text-xs font-medium",
   mobile:
-    "px-[32px] py-[17.5px] sm:px[29.5px] sm:py-[13.5px] flex justify-center rounded-lg",
+    "px-[32px] py-[17.5px] sm:px-[29.5px] sm:py-[13.5px] flex justify-center rounded-lg",
   inline: "font-medium",
   iconTop: "flex-col space-y-1 items-center px-3 py-2 rounded-md text-sm",
 } as const;

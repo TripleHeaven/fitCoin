@@ -8,6 +8,7 @@ export const TitleVariant = {
   h3: "text-[20px] sm:text-[32px]  font-[microgrammaRegular] uppercase",
   h4: "text-[16px] sm:text-[18px] font-[microgrammaRegular]  uppercase",
   h5: "text-[24px] sm:text-[32px]",
+  linkT: "sm:text-[16px] font-[microgrammaRegular] uppercase",
 } as const;
 
 export type TitleVariant = ValueOf<typeof TitleVariant>;

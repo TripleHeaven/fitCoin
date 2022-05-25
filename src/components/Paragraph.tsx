@@ -4,7 +4,8 @@ import clsx from "clsx";
 
 export const ParagraphVariant = {
   text: "text-[18px] sm:text-[24px] text-[#1D2124]",
-  textLarge: "text-[20] text-[#1D2124]",
+  textLarge: "text-[20px] text-[#1D2124]",
+  linkLarge: "text-[14px] text-[#000] [microgrammaRegular]",
 } as const;
 
 export type ParagraphVariant = ValueOf<typeof ParagraphVariant>;

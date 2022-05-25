@@ -23,6 +23,9 @@ export const RoadMap = () => {
           className="bg-[white] p-[16px] rounded-[16px] flex flex-col"
           style={{
             boxShadow: "0px 4px 16px -6px rgba(0, 0, 0, 0.1)",
+            backgroundImage: "url('./bgs/robotBg.png')",
+            backgroundSize: "100%",
+            position: "relative",
           }}
         >
           <div>
@@ -141,6 +144,9 @@ export const RoadMap = () => {
           className="bg-[white] p-[16px] rounded-[16px] flex flex-col"
           style={{
             boxShadow: "0px 4px 16px -6px rgba(0, 0, 0, 0.1)",
+            backgroundImage: "url('./bgs/robotBg.png')",
+            backgroundSize: "100%",
+            position: "relative",
           }}
         >
           <div>
@@ -214,6 +220,9 @@ export const RoadMap = () => {
           className="bg-[white] p-[16px] rounded-[16px] flex flex-col"
           style={{
             boxShadow: "0px 4px 16px -6px rgba(0, 0, 0, 0.1)",
+            backgroundImage: "url('./bgs/robotBg.png')",
+            backgroundSize: "100%",
+            position: "relative",
           }}
         >
           <div>
@@ -281,6 +290,9 @@ export const RoadMap = () => {
           className="bg-[white] p-[16px] rounded-[16px] flex flex-col"
           style={{
             boxShadow: "0px 4px 16px -6px rgba(0, 0, 0, 0.1)",
+            backgroundImage: "url('./bgs/robotBg.png')",
+            backgroundSize: "100%",
+            position: "relative",
           }}
         >
           <div>

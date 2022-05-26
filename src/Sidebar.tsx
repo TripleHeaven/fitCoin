@@ -5,6 +5,7 @@ import { Collapse } from "components/Collapse";
 import { useDesktopProvider } from "hooks/useDesktopContext";
 import { Title, TitleVariant } from "components/Title";
 import { Paragraph, ParagraphVariant } from "components/Paragraph";
+import { Link } from "react-router-dom";
 
 export const Sidebar = () => {
   const { isDesktop } = useDesktopProvider();
@@ -17,7 +18,9 @@ export const Sidebar = () => {
   return (
     <>
       <div className="w-full h-[72px] flex items-center visible sm:flex px-[16px] py-[12px] sm:px-[64px] sm:bg-[white]">
-        <img src="./icons/fitCoin.svg" alt="fitCoin" />
+        <Link to="/">
+          <img src="./icons/fitCoin.svg" alt="fitCoin" />
+        </Link>
 
         <div className="ml-auto  sm:hidden">
           <img
@@ -36,9 +39,9 @@ export const Sidebar = () => {
                 </a>
               </div>
               <div>
-                <a>
+                <Link to="/tokenomics">
                   <Title variant={TitleVariant.linkT}>token</Title>
-                </a>
+                </Link>
               </div>
               <div className="relative">
                 <div
@@ -177,6 +180,9 @@ export const Sidebar = () => {
             <a className="">
               <h4>revolution</h4>
             </a>
+            <Link to="/tokenomics">
+              <h4>token</h4>
+            </Link>
             <a>
               <h4>community</h4>
             </a>

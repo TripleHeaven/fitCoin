@@ -24,20 +24,21 @@ export const ButtonVariantsMap = typeof ButtonVariants;
 
 export type ButtonVariants = ValueOf<typeof ButtonVariants>;
 
-const ButtonSizes = {
+export const ButtonSizes = {
   lg: "px-8 py-3 rounded-lg text-xl",
   md: "px-4 py-2 rounded-md",
   sm: "px-4 py-2 rounded-sm text-sm",
   xs: "  rounded-sm text-xs font-medium",
   mobile:
     "px-[32px] py-[17.5px] sm:px-[29.5px] sm:py-[13.5px] flex justify-center rounded-lg",
+  xl: "sm:px-[79.5px] sm:py-[25.5px] flex justify-center rounded-lg",
   inline: "font-medium",
   iconTop: "flex-col space-y-1 items-center px-3 py-2 rounded-md text-sm",
 } as const;
 
 export const ButtonSizesMap = ButtonSizes;
 
-export type ButtonSizes = ValueOf<typeof ButtonVariants>;
+export type ButtonSizes = ValueOf<typeof ButtonSizes>;
 
 export interface ButtonProps {
   variant?: ButtonVariants;

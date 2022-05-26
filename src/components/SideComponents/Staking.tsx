@@ -1,11 +1,14 @@
-import { Button, ButtonVariants } from "components/Button";
+import { Button, ButtonSizes, ButtonVariants } from "components/Button";
 import { Collapse } from "components/Collapse";
 import { Paragraph } from "components/Paragraph";
 import { StakingOption } from "components/StakingOption";
 import { Title, TitleVariant } from "components/Title";
+import { useDesktopProvider } from "hooks/useDesktopContext";
 import { useState } from "react";
 
 export const Staking = () => {
+  const { isDesktop } = useDesktopProvider();
+
   return (
     <div className="px-[16px] mt-[60px]">
       <div className="px-[16]">
@@ -13,7 +16,7 @@ export const Staking = () => {
           Staking
         </Title>
 
-        <div className="flex flex-col gap-[16px] mt-[32px]">
+        <div className="flex flex-col gap-[16px] sm:gap-[44px] mt-[32px] sm:flex-row sm:px-[200px]">
           <StakingOption
             img="./icons/stakingOpt1.png"
             text="Token holders are able to stake their Fitcoin on the Staking DApp
@@ -28,15 +31,18 @@ export const Staking = () => {
             img="./icons/stakingOpt3.png"
             text="Stake tokens, receive rewards and collect exclusive NFTs with staking tier-system"
           />
-
-          <div className="mt-[32px]">
-            <Button variant={ButtonVariants.gradient} className="mx-auto">
-              <div className="flex">
-                go to staking app
-                <img className="ml-[10px]" src="./icons/arrowRight.svg" />
-              </div>
-            </Button>
-          </div>
+        </div>
+        <div className="mt-[32px] sm:flex sm:mt-[64px]">
+          <Button
+            variant={ButtonVariants.gradient}
+            size={isDesktop ? ButtonSizes.xl : undefined}
+            className="mx-auto"
+          >
+            <div className="flex">
+              go to staking app
+              <img className="ml-[10px]" src="./icons/arrowRight.svg" />
+            </div>
+          </Button>
         </div>
       </div>
     </div>

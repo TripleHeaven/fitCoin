@@ -3,6 +3,7 @@ import { Collapse } from "components/Collapse";
 import { Paragraph, ParagraphVariant } from "components/Paragraph";
 import { StakingOption } from "components/StakingOption";
 import { Title, TitleVariant } from "components/Title";
+import { useDesktopProvider } from "hooks/useDesktopContext";
 import { useState } from "react";
 
 export const RoadMap = () => {
@@ -11,16 +12,18 @@ export const RoadMap = () => {
   const [isOpenQ3, setOpenQ3] = useState(false);
   const [isOpenQ4, setOpenQ4] = useState(false);
 
+  const { isDesktop } = useDesktopProvider();
+
   return (
     <div className="px-[16px] mt-[60px]">
       <Title variant={TitleVariant.h2} className="text-center text-gray-300">
         roadmap
       </Title>
 
-      <div className="flex flex-col gap-[24px] mt-[32px]">
+      <div className="flex flex-col gap-[24px] mt-[32px] sm:flex-row sm:mx-[150px] sm:justify-between sm:mt-[64px]">
         <div
           onClick={() => setOpenQ1(true)}
-          className="bg-[white] p-[16px] rounded-[16px] flex flex-col"
+          className="bg-[white] p-[16px] rounded-[16px] flex flex-col sm:w-[327px]"
           style={{
             boxShadow: "0px 4px 16px -6px rgba(0, 0, 0, 0.1)",
             backgroundImage: "url('./bgs/robotBg.png')",
@@ -51,7 +54,7 @@ export const RoadMap = () => {
                 {!isOpenQ1 && <img src="./icons/arrowDown.svg"></img>}
               </div>
             </div>
-            <Collapse open={isOpenQ1}>
+            <Collapse open={isOpenQ1 || isDesktop}>
               <div className="flex flex-col ml-[8px] gap-[22px] mt-[32px]">
                 <div className="flex">
                   <img src={"./icons/qOption.svg"} />
@@ -141,7 +144,7 @@ export const RoadMap = () => {
 
         <div
           onClick={() => setOpenQ2(true)}
-          className="bg-[white] p-[16px] rounded-[16px] flex flex-col"
+          className="bg-[white] p-[16px] rounded-[16px] flex flex-col sm:w-[327px]"
           style={{
             boxShadow: "0px 4px 16px -6px rgba(0, 0, 0, 0.1)",
             backgroundImage: "url('./bgs/robotBg.png')",
@@ -169,10 +172,12 @@ export const RoadMap = () => {
                   right: "0",
                 }}
               >
-                {!isOpenQ2 && <img src="./icons/arrowDown.svg"></img>}
+                {!isOpenQ2 && !isDesktop && (
+                  <img src="./icons/arrowDown.svg"></img>
+                )}
               </div>
             </div>
-            <Collapse open={isOpenQ2}>
+            <Collapse open={isOpenQ2 || isDesktop}>
               <div className="flex flex-col ml-[8px] gap-[22px] mt-[32px]">
                 <div className="flex">
                   <img src={"./icons/qOption.svg"} />
@@ -217,7 +222,7 @@ export const RoadMap = () => {
 
         <div
           onClick={() => setOpenQ3(true)}
-          className="bg-[white] p-[16px] rounded-[16px] flex flex-col"
+          className="bg-[white] p-[16px] rounded-[16px] flex flex-col sm:w-[327px]"
           style={{
             boxShadow: "0px 4px 16px -6px rgba(0, 0, 0, 0.1)",
             backgroundImage: "url('./bgs/robotBg.png')",
@@ -245,10 +250,12 @@ export const RoadMap = () => {
                   right: "0",
                 }}
               >
-                {!isOpenQ3 && <img src="./icons/arrowDown.svg"></img>}
+                {!isOpenQ3 && !isDesktop && (
+                  <img src="./icons/arrowDown.svg"></img>
+                )}
               </div>
             </div>
-            <Collapse open={isOpenQ3}>
+            <Collapse open={isOpenQ3 || isDesktop}>
               <div className="flex flex-col ml-[8px] gap-[22px] mt-[32px]">
                 <div className="flex">
                   <img src={"./icons/qOption.svg"} />
@@ -287,7 +294,7 @@ export const RoadMap = () => {
 
         <div
           onClick={() => setOpenQ4(true)}
-          className="bg-[white] p-[16px] rounded-[16px] flex flex-col"
+          className="bg-[white] p-[16px] rounded-[16px] flex flex-col sm:w-[327px]"
           style={{
             boxShadow: "0px 4px 16px -6px rgba(0, 0, 0, 0.1)",
             backgroundImage: "url('./bgs/robotBg.png')",
@@ -315,10 +322,12 @@ export const RoadMap = () => {
                   right: "0",
                 }}
               >
-                {!isOpenQ4 && <img src="./icons/arrowDown.svg"></img>}
+                {!isOpenQ4 && !isDesktop && (
+                  <img src="./icons/arrowDown.svg"></img>
+                )}
               </div>
             </div>
-            <Collapse open={isOpenQ4}>
+            <Collapse open={isOpenQ4 || isDesktop}>
               <div className="flex flex-col ml-[8px] gap-[22px] mt-[32px]">
                 <div className="flex">
                   <img src={"./icons/qOption.svg"} />

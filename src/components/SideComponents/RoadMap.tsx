@@ -15,7 +15,15 @@ export const RoadMap = () => {
   const { isDesktop } = useDesktopProvider();
 
   return (
-    <div className="px-[16px] mt-[60px]">
+    <div className="px-[16px] mt-[60px] relative">
+      <img
+        src="./icons/xx.svg"
+        style={{
+          position: "absolute",
+          left: "15px",
+          width: "12px",
+        }}
+      ></img>
       <Title variant={TitleVariant.h2} className="text-center text-gray-300">
         roadmap
       </Title>

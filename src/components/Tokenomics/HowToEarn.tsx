@@ -17,7 +17,7 @@ export const HowToEarn = () => (
         <Title className="text-gray-300" variant={TitleVariant.h1}>
           how to earn
         </Title>
-        <Title variant={TitleVariant.h2}>FIXED STAKING </Title>
+        <Title variant={TitleVariant.h3}>FIXED STAKING </Title>
         <div className="mt-[24px]">
           <img src="./icons/calc.png" style={{ zIndex: "100" }}></img>
         </div>

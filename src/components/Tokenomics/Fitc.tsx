@@ -4,7 +4,7 @@ import { Title, TitleVariant } from "components/Title";
 
 export const Fitc = () => {
   return (
-    <div className="relative px-[16px]">
+    <div className="relative px-[16px] mt-[44px] ">
       <img
         src="./icons/xx.svg"
         style={{
@@ -14,8 +14,8 @@ export const Fitc = () => {
         }}
       ></img>
       <div className="text-center items-center">
-        <div className="px-[12px]">
-          <Title className="text-gray-300" variant={TitleVariant.h1}>
+        <div className="px-[20px]">
+          <Title className="text-gray-300 px-[16px]" variant={TitleVariant.h1}>
             fitc token
           </Title>
           <Title variant={TitleVariant.h2}>a New digital currency </Title>

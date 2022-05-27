@@ -5,11 +5,12 @@ import { Referal } from "components/Revolution/referal";
 import { Utility } from "components/Revolution/utility";
 import { Ways } from "components/Revolution/ways";
 import { Wrapper } from "components/Wrapper";
+import '../styles/globals.css';
 
 
 export const Revolution = () => (
   <Wrapper>
-    <main className="flex w-full items-center justify-center flex-col ">
+    <main className="revolution-bg flex w-full items-center justify-center flex-col ">
       <About />
       <Digital />
       <Utility />

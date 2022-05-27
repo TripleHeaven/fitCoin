@@ -54,3 +54,9 @@ h4 {
 button {
   @apply cursor-pointer select-none;
 }
+
+.revolution-bg{
+  background-image: url('../../public/bgs/basicbg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

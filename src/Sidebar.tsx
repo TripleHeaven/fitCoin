@@ -144,11 +144,13 @@ export const Sidebar = () => {
                   )}
                 >
                   <div className="flex mt-[24px]">
-                    <a>
-                      <Paragraph variant={ParagraphVariant.linkLarge}>
-                        team
-                      </Paragraph>
-                    </a>
+                    <Link to="/team">
+                      <a>
+                        <Paragraph variant={ParagraphVariant.linkLarge}>
+                          team
+                        </Paragraph>
+                      </a>
+                    </Link>
                   </div>
                   <div className=" flex">
                     <a>
@@ -170,7 +172,7 @@ export const Sidebar = () => {
         {isOpen && (
           <div
             className={clsx(
-              "fixed  gap-[44px] top-[84px] p-0 right-0  flex overflow-auto z-10 flex-col animate-revealLeft flex-shring-0 h-full bg-[#fff] px-[24px] pt-[32px]",
+              "fixed  gap-[44px] top-[84px] p-0 right-0  flex overflow-auto z-10 flex-col animate-revealLeft flex-shring-0 h-full bg-[#fff] px-[24px] pt-[32px] sm:hidden",
               {
                 "h-auto": !isOpen,
                 "h-full": isOpen,
@@ -206,13 +208,15 @@ export const Sidebar = () => {
               <Collapse open={isOpenCommunity}>
                 <div className="flex flex-col ml-[8px] gap-[33px]">
                   <div className="mt-[33px]">
-                    <a>
-                      <h4>test</h4>
-                    </a>
+                    <Link to="/team">
+                      <a>
+                        <h4>team</h4>
+                      </a>
+                    </Link>
                   </div>
                   <div>
                     <a>
-                      <h4>test</h4>
+                      <h4>white paper</h4>
                     </a>
                   </div>
                 </div>

@@ -34,9 +34,9 @@ export const Sidebar = () => {
           <div className="ml-auto flex gap-[44px] font-[microgrammaRegular] ">
             <div className="flex gap-[44px] my-auto">
               <div>
-                <a>
+                <Link to="/revolution">
                   <Title variant={TitleVariant.linkT}>revolution</Title>
-                </a>
+                </Link>
               </div>
               <div>
                 <Link to="/tokenomics">
@@ -180,7 +180,9 @@ export const Sidebar = () => {
             )}
           >
             <a className="">
-              <h4>revolution</h4>
+              <Link to="/revolution">
+                  <h4>revolution</h4>
+              </Link>
             </a>
             <Link to="/tokenomics">
               <h4>token</h4>

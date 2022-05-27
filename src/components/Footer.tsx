@@ -1,5 +1,5 @@
 export const Footer = () => (
-  <div className="bg-[#1D2124] flex">
+  <div className="bg-[#1D2124] flex absolute bottom-0 w-full">
     <div className="flex mx-auto h-[60px] gap-[24px]">
       <div className="cursor-pointer rounded-[100px] w-[44px] my-auto opacity-[1] h-[44px]">
         <img src="./icons/socialTwitter1.svg"></img>

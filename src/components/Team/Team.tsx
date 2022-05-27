@@ -5,6 +5,7 @@ import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
 import { useState } from "react";
 import styles from "./Team.module.css";
+import { TeamMember } from "./TeamMember";
 
 export const TeamWrapper = () => {
   const [isOpenReadMore, setOpenReadMore] = useState(false);
@@ -87,34 +88,94 @@ export const TeamWrapper = () => {
           </div>
         )}
       </section>
-      <section
-        className="items-center text-center w-full"
-        style={{ backgroundColor: "gray" }}
-      >
+      <section className="items-center text-center w-full">
         <Title variant={TitleVariant.h2}>core team</Title>
-        <section className="flex flex-col items-center">
-          <div className="w-[340px] h-[380px] rounded-[16px] relative">
-            <img
-              src="./teams/maxPhoto.png"
-              className={styles.personImage}
-              alt="background photo max"
-            />
-            <div
-              className={clsx(
-                "absolute  w-[307px] h-[343px] rounded-[16px] left-[17px] flex flex-col",
-                styles.personImageInnerWrapper
-              )}
-            >
-              <div className={clsx("text-left mt-auto px-[8px] py-[6px]")}>
-                <label className="font-[microgrammaBold] font-[18px] text-[#fff] uppercase">
-                  maxime gagne
-                </label>
-                <p className="font-[16px] text-[#fff] whitespace-nowrap">
-                  Founder and CEO, Revolution Nutrition
-                </p>
-              </div>
-            </div>
-          </div>
+        <section
+          className={clsx(
+            "flex flex-wrap justify-center mx-auto mt-[64px]",
+            styles.coreTeamContainer
+          )}
+        >
+          <TeamMember
+            name="maxime gagne"
+            role="Founder and CEO, Revolution Nutrition"
+            picSrc="./teams/maxPhoto.png"
+            fullDesc={
+              <p className="text-[14px] text-[#fff] mt-[19px]">
+                Maxime Gagne Founder and CEO, Revolution Nutrition Maxime is the
+                Founder and CEO of Revolution Nutrition and leads the vision for
+                Fitcoin. Founded in 2007, Revolution Nutrition is headquartered
+                in Canada, a start-up accelerator he conceived of and first
+                funded. Revolution has since become a global leader in the
+                health & beauty industry with its state-of-the-art innovation
+                and its unparalleled quality products.
+              </p>
+            }
+          />
+          <TeamMember
+            name="Michael Enis Koka"
+            role="IT Director"
+            picSrc="./teams/michael.png"
+            fullDesc={
+              <p className="text-[14px] text-[#fff] mt-[19px]">
+                Michael is a performance driven IT director that served as an
+                advisor for some of the major e-commerce brands in North
+                America. He graduated in computer science and has 12+ years of
+                experience in e-commerce and web development. He is an early
+                crypto adopter and has profound knowledge of decentralized
+                applications. He has very strong skills in managing and
+                coordinating information technology infrastructure.
+              </p>
+            }
+          />
+          <TeamMember
+            name="Shijian Wu"
+            role="Senior Software and blockchain Developer"
+            picSrc="./teams/shijan.png"
+            fullDesc={
+              <p className="text-[14px] text-[#fff] mt-[19px]">
+                Passionate web and blockchain developer with 10+ years of
+                experience in the industry. Proven ability to develop innovative
+                solutions on the blockchain, build decentralized applications,
+                and lead teams. Seeking an opportunity to use expertise to drive
+                transformation in a forward-thinking organization. Shi Jian is a
+                certified blockchain developer and has great experience in
+                developing decentralized blockchain applications using Ethereum.
+              </p>
+            }
+          />
+
+          <TeamMember
+            name="Changmin Zhao"
+            role="Senior Software Developer"
+            picSrc="./teams/changmin.png"
+            fullDesc={
+              <p className="text-[14px] text-[#fff] mt-[19px]">
+                Changmin is a full-stack developer with 8+ years of experience.
+                With a unique combination of design and development experience,
+                he builds professional, pixel-perfect interfaces in a short
+                amount of time. Changmin excels at delivering smart solutions
+                that enable seamless experiences. He has nearly a decade of
+                full-stack development experience building scalable and
+                thoroughly tested web applications.
+              </p>
+            }
+          />
+
+          <TeamMember
+            name="Meet Amid"
+            role="Software Developer"
+            picSrc="./teams/meet.png"
+            fullDesc={
+              <p className="text-[14px] text-[#fff] mt-[19px]">
+                Meet is a passionate web developer with over five years of
+                experience in Software Development with a really high degree of
+                autonomy, organizational skills, and strong understanding of all
+                coding languages. He believes in lifelong learning, and
+                technology as a tool to help solve problems.
+              </p>
+            }
+          />
         </section>
       </section>
     </section>

@@ -23,16 +23,29 @@ body {
 
 .gradientNormal {
   background: linear-gradient(107.74deg, #30cfd0 12.12%, #330867 95.64%);
+  transition: 0.4s ease-in-out;
+}
+
+.gradientNormal:hover{
+  background: linear-gradient(to right, #330867, #30cfd0) border-box
 }
 
 .gradientInverted {
   border-width: 2px;
   border-style: solid;
+  transition: 0.2s ease-in-out;
   background: linear-gradient(1deg, #f8f9fa, #f8f9fa) padding-box,
     linear-gradient(to right, #30cfd0, #330867) border-box;
   border-radius: 8px;
   border: 2px solid transparent;
 }
+
+.gradientInverted:hover{
+  background:linear-gradient(1deg, #dceeee, #f5f5f5) padding-box,
+  linear-gradient(to right, #30cfd0, #330867) border-box;
+  
+}
+
 
 h1 {
   @apply text-7xl font-[microgrammaBold] uppercase;
@@ -53,4 +66,10 @@ h4 {
 [role="button"],
 button {
   @apply cursor-pointer select-none;
+}
+
+.revolution-bg{
+  background-image: url('../../public/bgs/basicbg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }

@@ -256,7 +256,9 @@ export const Sidebar = () => {
             )}
           >
             <a className="">
-              <h4>revolution</h4>
+              <Link to="/revolution">
+                <h4>revolution</h4>
+              </Link>
             </a>
             <Link to="/tokenomics">
               <h4>token</h4>

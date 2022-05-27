@@ -5,13 +5,14 @@ import { Title, TitleVariant } from "components/Title";
 import { useDesktopProvider } from "hooks/useDesktopContext";
 import { url } from "inspector";
 import { useState } from "react";
+import "./FitCoin.css"
 
 export const FitCoin = () => {
   const { isDesktop } = useDesktopProvider();
 
   return (
-    <div
-      className="px-[16px] mt-[60px] sm:px-[120px]  sm:pb-[400px]"
+    <section
+      className="px-[16px] mt-[60px] fitCoin sm:px-[120px] fi sm:pb-[400px]"
       style={
         !isDesktop
           ? {
@@ -73,6 +74,6 @@ export const FitCoin = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

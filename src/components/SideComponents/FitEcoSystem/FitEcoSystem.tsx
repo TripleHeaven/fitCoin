@@ -4,6 +4,7 @@ import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
 import { useDesktopProvider } from "hooks/useDesktopContext";
 import { useState } from "react";
+import "./FitEcoSystem.css"
 
 export const FitEcoSystem = () => {
   const [isOpenReadMore, setIsOpenReadMore] = useState(false);
@@ -14,12 +15,14 @@ export const FitEcoSystem = () => {
       {isDesktop && (
         <>
           <img
+          className="eco__img"
             src="./icons/lines.svg"
             style={{
               position: "absolute",
             }}
           />
           <img
+            className="eco__img"
             src="./icons/green_dots_fit.svg"
             style={{
               position: "absolute",
@@ -29,7 +32,7 @@ export const FitEcoSystem = () => {
           />
         </>
       )}
-      <div className="px-[16px] sm:px-[300px]">
+      <div className="max-w-[1100px] m-auto px-[15px] eco__content">
         <div>
           <Title
             variant={TitleVariant.h2}

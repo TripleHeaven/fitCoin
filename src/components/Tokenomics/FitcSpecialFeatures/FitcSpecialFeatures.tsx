@@ -1,6 +1,6 @@
 import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
-import "./FitcSpecialFeatures.css"
+import "./FitcSpecialFeatures.css";
 
 export const FitcSpecialFeatures = () => {
   return (
@@ -78,13 +78,11 @@ export const FitcSpecialFeatures = () => {
           <div
             style={{ overflowWrap: "break-word", textDecoration: "underline" }}
           >
-            <a href={"test"} className="text-[#330867] text-[24px] break-all">&nbsp;0x90E3C7e03EEab5a8D440fA6d0f8d232FFfc9C225</a>
+            <a href={"test"} className="text-[#330867] text-[24px] break-all">
+              &nbsp;0x90E3C7e03EEab5a8D440fA6d0f8d232FFfc9C225
+            </a>
           </div>
         </div>
-        <img
-          src="./icons/xxx.svg"
-          style={{ position: "absolute", bottom: "0" }}
-        ></img>
       </div>
     </div>
   );

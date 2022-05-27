@@ -29,14 +29,30 @@ export const Fitc = () => {
             of account for all economic transactions within the Fit Ecosystem.
           </Paragraph>
         </div>
+
         <Button variant={ButtonVariants.gradientInverted} className="mt-[48px]">
           <div className="flex">
             white paper
             <img className="ml-[16px] " src="./icons/arrowRightGr.svg" />
           </div>
         </Button>
-
-        <img src="./bgs/fitcMobile.png" className="mt-[32px]"></img>
+        <img
+          src="./tokenomics/fitcLabel.svg"
+          className="w-screen left-0 hidden sm:block mt-[128px]"
+          style={{
+            position: "absolute",
+          }}
+        ></img>
+        <img
+          src="./tokenomics/fitcLabelM.svg"
+          className="w-screen left-0 sm:hidden mt-[32px]"
+          style={{
+            position: "absolute",
+          }}
+        ></img>
+        <div className="flex w-[256px] sm:w-auto mt-[32px]">
+          <img src="./tokenomics/coins.png" className="relative "></img>
+        </div>
       </div>
     </div>
   );

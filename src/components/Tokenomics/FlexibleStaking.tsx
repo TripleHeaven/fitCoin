@@ -4,8 +4,8 @@ import { Title, TitleVariant } from "components/Title";
 
 export const FlexibleStaking = () => {
   return (
-    <div className="relative px-[16px] mt-[60px]">
-      <div className="text-center items-center">
+    <div className="relative px-[16px] mt-[60px]  flex">
+      <div className="text-center items-center w-full mx-auto max-w-[1279px]">
         <div className="">
           <Title variant={TitleVariant.h3} className="font-[microgrammaBold]">
             flexible STAKING{" "}
@@ -44,14 +44,6 @@ export const FlexibleStaking = () => {
               Unstake at any time or choose to stake more{" "}
             </Paragraph>
           </div>
-          <img
-            src="./icons/linesCurved.svg"
-            style={{
-              position: "absolute",
-              right: "0",
-              bottom: "250px",
-            }}
-          />
         </div>
         <div className="flex">
           <img

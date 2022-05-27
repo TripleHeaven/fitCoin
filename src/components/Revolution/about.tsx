@@ -14,7 +14,7 @@ export const About = () => {
         </Title>
       </section>
       <section className="max-w-[1300px] w-full px-[1rem] mt-[64px]">
-      <div className="flex justify-between">
+      <div className="flex justify-center lg:justify-between items-center ">
         <div className="flex flex-col items-center justify-center max-w-[730px]  w-full">
           <Title className="w-full text-center lg:text-left" variant={TitleVariant.h3}>
             about
@@ -68,7 +68,7 @@ export const About = () => {
             <img src="./revolution/pills.png" alt="fit-pills"/>
           </div>
           <Button
-            className="w-full flex justify-center items-center text-center mt-3"
+            className="w-full text-[18px] md:text-[32px] flex justify-center items-center text-center mt-3"
             variant={ButtonVariants.gradientInverted}
             size={ButtonSizes.lg}
           >

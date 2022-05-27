@@ -8,8 +8,9 @@ export const Digital = () => {
   const [isOpenReadMore, setIsOpenReadMore] = useState(false);
 
   return (
-    <section className="mt-[64px] px-[1rem]">
-      <div className="flex flex-col justify-center items-center md:flex-row-reverse ">
+    <section className="mt-[64px] w-full px-[1rem] relative">
+        <div className="absolute  w-fit bottom-0  right-0 "><img className="w-[150px]"  src="./icons/twentyDots.svg" alt="dots" /></div>
+      <div className="flex flex-col justify-center items-center lg:flex-row-reverse ">
         <div className="flex flex-col items-center justify-center max-w-[730px]   w-full relative pb-[64px]">
           <Title
             className="w-full text-center lg:text-left"

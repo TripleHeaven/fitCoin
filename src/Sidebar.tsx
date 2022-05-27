@@ -99,9 +99,9 @@ export const Sidebar = () => {
         >
           <div className="flex gap-[44px] my-auto">
             <div>
-              <a>
+              <Link to="/revolution">
                 <Title variant={TitleVariant.linkT}>revolution</Title>
-              </a>
+              </Link>
             </div>
             <div>
               <Link to="/tokenomics">

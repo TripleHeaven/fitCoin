@@ -13,7 +13,7 @@ export const DesktopProvider: React.FC<DesktopProviderProps> = ({
   children,
 }) => {
   const width = useWindowWidth();
-  const [isDesktop, setDesktop] = useState(width >= 650);
+  const [isDesktop, setDesktop] = useState(width >= 700);
 
   useEffect(() => {
     const isDesk = width >= 650;

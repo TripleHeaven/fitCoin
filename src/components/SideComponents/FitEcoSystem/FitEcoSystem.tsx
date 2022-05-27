@@ -4,35 +4,24 @@ import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
 import { useDesktopProvider } from "hooks/useDesktopContext";
 import { useState } from "react";
-import "./FitEcoSystem.css"
+import "./FitEcoSystem.css";
 
 export const FitEcoSystem = () => {
   const [isOpenReadMore, setIsOpenReadMore] = useState(false);
-  const { isDesktop } = useDesktopProvider();
 
   return (
     <section className="relative">
-      {isDesktop && (
-        <>
-          <img
+      <>
+        <img
           className="eco__img"
-            src="./icons/lines.svg"
-            style={{
-              position: "absolute",
-            }}
-          />
-          <img
-            className="eco__img"
-            src="./icons/green_dots_fit.svg"
-            style={{
-              position: "absolute",
-              right: "0",
-              bottom: "300px",
-            }}
-          />
-        </>
-      )}
-      <div className="max-w-[1100px] m-auto px-[15px] eco__content">
+          src="./icons/lines.svg"
+          style={{
+            position: "absolute",
+          }}
+        />
+        <img className="eco__imgDots" src="./icons/green_dots_fit.svg" />
+      </>
+      <div className=" relative max-w-[1100px] m-auto px-[15px] eco__content">
         <div>
           <Title
             variant={TitleVariant.h2}

@@ -2,7 +2,7 @@ import { Button, ButtonSizes, ButtonVariants } from "components/Button";
 import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
 import { useDesktopProvider } from "hooks/useDesktopContext";
-import "./RevolutionNutrition.css"
+import "./RevolutionNutrition.css";
 
 export const RevolutionNutrition = () => {
   const { isDesktop } = useDesktopProvider();
@@ -43,7 +43,7 @@ export const RevolutionNutrition = () => {
               />
               <div
                 style={{ backgroundColor: "#FFF" }}
-                className="py-[35px] px-[32px] w-[340px] z-[100]"
+                className="py-[35px] px-[32px] w-[340px] z-[100] rounded-[16px]"
               >
                 <img src="./icons/15.svg" className="mx-auto"></img>
                 <div className="text-[#819297] text-center">
@@ -52,7 +52,7 @@ export const RevolutionNutrition = () => {
               </div>
               <div
                 style={{ backgroundColor: "#FFF" }}
-                className="py-[35px] px-[32px] w-[340px] z-[100]"
+                className="py-[35px] px-[32px] w-[340px] z-[100] rounded-[16px]"
               >
                 <img src="./icons/moreOne.svg" className="mx-auto"></img>
                 <div className="text-[#819297] text-center">
@@ -61,7 +61,7 @@ export const RevolutionNutrition = () => {
               </div>
               <div
                 style={{ backgroundColor: "#FFF" }}
-                className="py-[35px] px-[32px] w-[340px] z-[100]"
+                className="py-[35px] px-[32px] w-[340px] z-[100] rounded-[16px]"
               >
                 <img src="./icons/2007.svg" className="mx-auto"></img>
                 <div className="text-[#819297] text-center">

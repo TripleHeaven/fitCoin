@@ -48,7 +48,9 @@ export const RevolutionItem: React.FC<RevolutionItemProps> = ({
               right: "0",
             }}
           >
-            <img src="./icons/arrowDown.svg" className="md:hidden"></img>
+            {!isOpen && (
+              <img src="./icons/arrowDown.svg" className="md:hidden"></img>
+            )}
           </div>
         </div>
         <Collapse open={isOpen} className="md:max-h-[1000px]">
@@ -62,13 +64,6 @@ export const RevolutionItem: React.FC<RevolutionItemProps> = ({
 };
 
 export const RoadMap = () => {
-  const [isOpenQ1, setOpenQ1] = useState(true);
-  const [isOpenQ2, setOpenQ2] = useState(false);
-  const [isOpenQ3, setOpenQ3] = useState(false);
-  const [isOpenQ4, setOpenQ4] = useState(false);
-
-  const { isDesktop } = useDesktopProvider();
-
   return (
     <section className="px-[16px] mt-[60px] relative pb-[64px] max-w-[1500px] mx-auto">
       <img

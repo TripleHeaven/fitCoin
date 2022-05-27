@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import { Button, ButtonVariants } from "./components";
 import { Collapse } from "components/Collapse";
@@ -13,6 +13,55 @@ export const Sidebar = () => {
   const [isOpenCommunity, setIsOpenCommunity] = useState(false);
   const [isOpenAbout, setIsOpenAbout] = useState(false);
 
+  const [isOpenCommunityDesk, setIsOpenCommunityDesk] = useState(false);
+  const [isOpenAboutDesk, setIsOpenAboutDesk] = useState(false);
+
+  const ref = useRef<HTMLDivElement>(null);
+  const refDesktop = useRef<HTMLDivElement>(null);
+  const refMobileButton = useRef<HTMLImageElement>(null);
+
+  const handleClickOutside = useCallback((event: MouseEvent) => {
+    const mobBile = document.getElementById("buttonMobile");
+
+    if (isOpen && refMobileButton.current === event.target) {
+      event.stopPropagation();
+      setOpen(false);
+      return;
+    }
+
+    if (
+      ref &&
+      ref.current &&
+      !ref.current?.contains(event.target as any) &&
+      !ref.current?.contains(refMobileButton.current)
+    ) {
+      setIsOpenCommunity(false);
+      setIsOpenAbout(false);
+      setOpen(false);
+    }
+  }, []);
+
+  const handleClickOutsideDesktop = useCallback((event: MouseEvent) => {
+    if (
+      refDesktop &&
+      refDesktop.current &&
+      !refDesktop.current?.contains(event.target as any)
+    ) {
+      setIsOpenCommunityDesk(false);
+      setIsOpenAboutDesk(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, true);
+    document.addEventListener("click", handleClickOutsideDesktop, true);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside, true);
+      document.removeEventListener("click", handleClickOutsideDesktop, true);
+    };
+  }, []);
+
   return (
     <>
       <div className="w-full h-[72px] flex items-center visible sm:flex px-[16px] py-[12px] sm:px-[64px] bg-[white]">
@@ -21,14 +70,33 @@ export const Sidebar = () => {
         </Link>
 
         <div className="ml-auto  lg:hidden">
+          {isOpen && (
+            <div
+              className="w-40 h-[50px]"
+              onClick={(event) => event?.stopPropagation()}
+              style={{
+                position: "absolute",
+                opacity: "0",
+                backgroundColor: "black",
+              }}
+            ></div>
+          )}
           <img
             src="./icons/sideBar.svg"
-            onClick={() => {
-              setOpen((prev) => !prev);
+            className="cursor-pointer"
+            id={"buttonMobile"}
+            ref={refMobileButton}
+            onClick={(event) => {
+              if (!isOpen) {
+                setOpen((prev) => !prev);
+              }
             }}
           ></img>
         </div>
-        <div className="ml-auto hidden lg:flex flex gap-[44px] font-[microgrammaRegular] ">
+        <div
+          ref={refDesktop}
+          className="ml-auto hidden lg:flex flex gap-[44px] font-[microgrammaRegular] "
+        >
           <div className="flex gap-[44px] my-auto">
             <div>
               <a>
@@ -42,8 +110,11 @@ export const Sidebar = () => {
             </div>
             <div className="relative">
               <div
-                className="flex"
-                onClick={() => setIsOpenCommunity((prev) => !prev)}
+                className="flex cursor-pointer"
+                onClick={() => {
+                  setIsOpenCommunityDesk((prev) => !prev);
+                  setIsOpenAboutDesk(false);
+                }}
               >
                 <div>
                   <Title variant={TitleVariant.linkT}>community</Title>
@@ -53,7 +124,7 @@ export const Sidebar = () => {
                     className="my-auto"
                     src="./icons/arrowDown.svg"
                     style={{
-                      transform: isOpenCommunity ? "rotate(-180deg)" : "",
+                      transform: isOpenCommunityDesk ? "rotate(-180deg)" : "",
                     }}
                   ></img>
                 </div>
@@ -61,65 +132,75 @@ export const Sidebar = () => {
               <div
                 className={clsx(
                   "absolute flex flex-col   gap-[33px] bg-[#fff] z-[100] px-[24px]  min-w-[190px] font-[14px] pb-[24px] mt-[20px]",
-                  !isOpenCommunity && "hidden"
+                  !isOpenCommunityDesk && "hidden"
                 )}
               >
-                <div className="flex mt-[24px]">
-                  <a>
+                <a href="test">
+                  <div className="flex mt-[24px]">
                     <Paragraph variant={ParagraphVariant.linkLarge}>
                       twitter
                     </Paragraph>
-                  </a>
-                  <div className="ml-auto my-auto">
-                    <img src="./icons/export.svg" />
+
+                    <div className="ml-auto my-auto">
+                      <img src="./icons/export.svg" />
+                    </div>
                   </div>
-                </div>
-                <div className=" flex">
-                  <a>
+                </a>
+                <a href="test">
+                  <div className=" flex">
                     <Paragraph variant={ParagraphVariant.linkLarge}>
                       facebook
                     </Paragraph>
-                  </a>
-                  <div className="ml-auto my-auto">
-                    <img src="./icons/export.svg" />
+                    <div className="ml-auto my-auto">
+                      <img src="./icons/export.svg" />
+                    </div>
                   </div>
-                </div>
-                <div className=" flex">
-                  <a>
-                    <Paragraph variant={ParagraphVariant.linkLarge}>
-                      discord
-                    </Paragraph>
-                  </a>
-                  <div className="ml-auto my-auto">
-                    <img src="./icons/export.svg" />
+                </a>
+                <a href="test">
+                  <div className=" flex">
+                    <a>
+                      <Paragraph variant={ParagraphVariant.linkLarge}>
+                        discord
+                      </Paragraph>
+                    </a>
+                    <div className="ml-auto my-auto">
+                      <img src="./icons/export.svg" />
+                    </div>
                   </div>
-                </div>
-                <div className=" flex">
-                  <a>
-                    <Paragraph variant={ParagraphVariant.linkLarge}>
-                      instagram
-                    </Paragraph>
-                  </a>
-                  <div className="ml-auto my-auto">
-                    <img src="./icons/export.svg" />
+                </a>
+                <a href="test">
+                  <div className=" flex">
+                    <a>
+                      <Paragraph variant={ParagraphVariant.linkLarge}>
+                        instagram
+                      </Paragraph>
+                    </a>
+                    <div className="ml-auto my-auto">
+                      <img src="./icons/export.svg" />
+                    </div>
                   </div>
-                </div>
-                <div className=" flex">
-                  <a>
-                    <Paragraph variant={ParagraphVariant.linkLarge}>
-                      write us
-                    </Paragraph>
-                  </a>
-                  <div className="ml-auto my-auto">
-                    <img src="./icons/export.svg" />
+                </a>
+                <a href="test">
+                  <div className=" flex">
+                    <a>
+                      <Paragraph variant={ParagraphVariant.linkLarge}>
+                        write us
+                      </Paragraph>
+                    </a>
+                    <div className="ml-auto my-auto">
+                      <img src="./icons/export.svg" />
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
             <div className="relative">
               <div
-                className="flex"
-                onClick={() => setIsOpenAbout((prev) => !prev)}
+                className="flex cursor-pointer"
+                onClick={() => {
+                  setIsOpenAboutDesk((prev) => !prev);
+                  setIsOpenCommunityDesk(false);
+                }}
               >
                 <div>
                   <Title variant={TitleVariant.linkT}>about</Title>
@@ -129,7 +210,7 @@ export const Sidebar = () => {
                     className="my-auto"
                     src="./icons/arrowDown.svg"
                     style={{
-                      transform: isOpenAbout ? "rotate(-180deg)" : "",
+                      transform: isOpenAboutDesk ? "rotate(-180deg)" : "",
                     }}
                   ></img>
                 </div>
@@ -137,28 +218,26 @@ export const Sidebar = () => {
               <div
                 className={clsx(
                   "absolute flex flex-col   gap-[33px] bg-[#fff] z-[100] px-[24px]  min-w-[250px] font-[14px] pb-[24px] mt-[20px]",
-                  !isOpenAbout && "hidden"
+                  !isOpenAboutDesk && "hidden"
                 )}
               >
                 <div className="flex mt-[24px]">
                   <Link to="/team">
-                    <a>
-                      <Paragraph variant={ParagraphVariant.linkLarge}>
-                        team
-                      </Paragraph>
-                    </a>
+                    <Paragraph variant={ParagraphVariant.linkLarge}>
+                      team
+                    </Paragraph>
                   </Link>
                 </div>
-                <div className=" flex">
-                  <a>
+                <a href="test">
+                  <div className=" flex">
                     <Paragraph variant={ParagraphVariant.linkLarge}>
                       white paper
                     </Paragraph>
-                  </a>
-                  <div className="ml-auto my-auto">
-                    <img src="./icons/export.svg" />
+                    <div className="ml-auto my-auto">
+                      <img src="./icons/export.svg" />
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -167,6 +246,7 @@ export const Sidebar = () => {
         </div>
         {isOpen && (
           <div
+            ref={ref}
             className={clsx(
               "fixed  gap-[44px] top-[64px] p-0 right-0  flex overflow-auto z-10 flex-col animate-revealLeft flex-shring-0 h-full bg-[#fff] px-[24px] pt-[32px] lg:hidden",
               {
@@ -181,16 +261,13 @@ export const Sidebar = () => {
             <Link to="/tokenomics">
               <h4>token</h4>
             </Link>
-            <a>
-              <h4>community</h4>
-            </a>
             <div>
               <div
-                className="flex"
+                className="flex cursor-pointer"
                 onClick={() => setIsOpenCommunity((prev) => !prev)}
               >
                 <div>
-                  <h4>token</h4>
+                  <h4>community</h4>
                 </div>
                 <div className="ml-auto">
                   <img
@@ -203,24 +280,54 @@ export const Sidebar = () => {
               </div>
               <Collapse open={isOpenCommunity}>
                 <div className="flex flex-col ml-[8px] gap-[33px]">
-                  <div className="mt-[33px]">
-                    <Link to="/team">
-                      <a>
-                        <h4>team</h4>
-                      </a>
-                    </Link>
-                  </div>
-                  <div>
-                    <a>
-                      <h4>white paper</h4>
-                    </a>
-                  </div>
+                  <a href="test">
+                    <div className="flex mt-[24px]">
+                      <h4>twitter</h4>
+
+                      <div className="ml-auto my-auto">
+                        <img src="./icons/export.svg" />
+                      </div>
+                    </div>
+                  </a>
+                  <a href="test">
+                    <div className=" flex">
+                      <h4>facebook</h4>{" "}
+                      <div className="ml-auto my-auto">
+                        <img src="./icons/export.svg" />
+                      </div>
+                    </div>
+                  </a>
+                  <a href="test">
+                    <div className=" flex">
+                      <h4>discord</h4>{" "}
+                      <div className="ml-auto my-auto">
+                        <img src="./icons/export.svg" />
+                      </div>
+                    </div>
+                  </a>
+                  <a href="test">
+                    <div className=" flex">
+                      <h4>instagram</h4>
+                      <div className="ml-auto my-auto">
+                        <img src="./icons/export.svg" />
+                      </div>
+                    </div>
+                  </a>
+                  <a href="test">
+                    <div className=" flex">
+                      <h4>write us</h4>
+
+                      <div className="ml-auto my-auto">
+                        <img src="./icons/export.svg" />
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </Collapse>
             </div>
             <div>
               <div
-                className="flex"
+                className="flex cursor-pointer"
                 onClick={() => setIsOpenAbout((prev) => !prev)}
               >
                 <div>
@@ -238,12 +345,12 @@ export const Sidebar = () => {
               <Collapse open={isOpenAbout}>
                 <div className="flex flex-col ml-[8px] gap-[33px]">
                   <div className="mt-[33px]">
-                    <a>
+                    <Link to="/team">
                       <h4>team</h4>
-                    </a>
+                    </Link>
                   </div>
                   <div>
-                    <a>
+                    <a href="test">
                       <h4>white paper</h4>
                     </a>
                   </div>

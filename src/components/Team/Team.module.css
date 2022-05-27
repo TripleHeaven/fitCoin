@@ -1,0 +1,27 @@
+.wrapper {
+  position: relative;
+}
+.personImage {
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: left bottom;
+}
+.personImageInnerWrapper {
+  background: linear-gradient(
+    180deg,
+    rgba(29, 33, 36, 0) 78.53%,
+    rgba(29, 33, 36, 0.7) 100%
+  );
+}

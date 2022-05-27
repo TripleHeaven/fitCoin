@@ -1,8 +1,8 @@
-import { AboutUs } from "components/Team/AboutUs";
+import { TeamWrapper } from "components/Team/Team";
 import { Wrapper } from "components/Wrapper";
 
 export const Team = () => (
   <Wrapper>
-    <AboutUs />
+    <TeamWrapper></TeamWrapper>
   </Wrapper>
 );

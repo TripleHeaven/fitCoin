@@ -8,7 +8,7 @@ export const RevolutionNutrition = () => {
   const { isDesktop } = useDesktopProvider();
 
   return (
-    <div
+    <section
       className="px-[12px] mt-[80px] relative"
       style={
         !isDesktop
@@ -106,6 +106,6 @@ export const RevolutionNutrition = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

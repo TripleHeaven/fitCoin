@@ -11,7 +11,7 @@ export const FitEcoSystem = () => {
   const { isDesktop } = useDesktopProvider();
 
   return (
-    <div className="relative">
+    <section className="relative">
       {isDesktop && (
         <>
           <img
@@ -95,6 +95,6 @@ export const FitEcoSystem = () => {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

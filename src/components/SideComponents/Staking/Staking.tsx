@@ -11,7 +11,7 @@ export const Staking = () => {
   const { isDesktop } = useDesktopProvider();
 
   return (
-    <div className="px-[16px] mt-[60px]">
+    <section className="px-[16px] mt-[60px]">
       <div className="px-[16] m-auto max-w-[1100px]">
         <Title className="text-center text-gray-300" variant={TitleVariant.h2}>
           Staking
@@ -51,6 +51,6 @@ export const Staking = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

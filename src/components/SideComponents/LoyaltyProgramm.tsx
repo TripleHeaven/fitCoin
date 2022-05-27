@@ -10,7 +10,7 @@ export const LoyaltyProgramm = () => {
   const { isDesktop } = useDesktopProvider();
 
   return (
-    <div className="px-[16px] mt-[60px]">
+    <section className="px-[16px] mt-[60px]">
       <Title variant={TitleVariant.h2} className="text-center text-gray-300">
         loyalty programm
       </Title>
@@ -32,6 +32,6 @@ export const LoyaltyProgramm = () => {
           </div>
         </Button>
       </div>
-    </div>
+    </section>
   );
 };

@@ -64,7 +64,8 @@ export const Sidebar = () => {
 
   return (
     <>
-      <div className="w-full h-[72px] flex items-center visible sm:flex px-[16px] py-[12px] sm:px-[64px] bg-[white]">
+      <header className="w-full bg-[white]">
+        <div className=" m-auto max-w-[1300px] h-[72px] px-2 flex items-center visible sm:flex">
         <Link to="/">
           <img src="./icons/fitCoin.svg" alt="fitCoin" />
         </Link>
@@ -362,7 +363,8 @@ export const Sidebar = () => {
             <Button variant={ButtonVariants.gradient}>launch app</Button>
           </div>
         )}
-      </div>
+        </div>
+      </header>
     </>
   );
 };

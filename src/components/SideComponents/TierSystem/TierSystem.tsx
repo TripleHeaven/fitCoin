@@ -1,13 +1,14 @@
 import { Button, ButtonSizes, ButtonVariants } from "components/Button";
 import { Title, TitleVariant } from "components/Title";
 import { useDesktopProvider } from "hooks/useDesktopContext";
+import "./TierSystem.css"
 
 export const TierSystem = () => {
   const { isDesktop } = useDesktopProvider();
 
   return (
-    <div className="px-[12px] sm:px-[140px] mt-[80px]">
-      <div className="max-w-[1100px] m-auto">
+    <section className="px-[12px] sm:px-[140px] mt-[80px]">
+      <div className="max-w-[1150px] m-auto">
         <Title className="text-center text-gray-300" variant={TitleVariant.h2}>
           tier system
         </Title>
@@ -24,7 +25,7 @@ export const TierSystem = () => {
               <img src="./icons/Tier2Mobile.png" className="mt-[32px] w-full" />
             </>
           ) : (
-            <div className="flex justify-center">
+            <div className="flex justify-center ">
               <img
                 className="w-full"
                 src="./icons/tierDesktop.png"
@@ -38,7 +39,7 @@ export const TierSystem = () => {
             </div>
           )}
         </div>
-        <div className="flex w-full mt-[48px] sm:flex-wrap sm:justify-center sm:px-[auto]]">
+        <div className="flex w-full mt-[48px] sm:flex-wrap sm:justify-center sm:px-[auto] tier__footer">
           {isDesktop && (
             <img
               src="./icons/tier2Desktop.png"
@@ -49,7 +50,7 @@ export const TierSystem = () => {
               }}
             />
           )}
-
+          <div className="mt-[50px]">
           <Button
             variant={ButtonVariants.gradientInverted}
             size={isDesktop ? ButtonSizes.xl : undefined}
@@ -60,8 +61,9 @@ export const TierSystem = () => {
               <img className="ml-[16px]" src="./icons/arrowRightGr.svg" />
             </div>
           </Button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

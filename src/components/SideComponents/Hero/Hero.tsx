@@ -7,7 +7,7 @@ import "./Hero.css"
 export const Hero = () => {
   const { isDesktop } = useDesktopProvider();
   return (
-    <div
+    <section
       className="px-[17px] sm:px-[120px]"
       style={{
         backgroundImage: isDesktop
@@ -18,7 +18,7 @@ export const Hero = () => {
         position: "relative",
       }}
     >
-      <div className="sm:flex flex-col sm:max-w-[1100px] sm:pb-[1000px]">
+      <div className="sm:flex flex-col m-auto max-w-[1300px] sm:pb-[1000px]">
         <div className="text-center mt-[64px] sm:mt-[100px] sm:text-left ">
           <Title variant={TitleVariant.h1} className=" text-gray-300">
             fitcoin
@@ -56,6 +56,6 @@ export const Hero = () => {
 
         <img className="sm:hidden" src="./icons/TwoCoins.png" />
       </div>
-    </div>
+    </section>
   );
 };

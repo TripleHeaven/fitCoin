@@ -15,7 +15,7 @@ export const RoadMap = () => {
   const { isDesktop } = useDesktopProvider();
 
   return (
-    <div className="px-[16px] mt-[60px] relative">
+    <section className="px-[16px] mt-[60px] relative">
       <img
         src="./icons/xx.svg"
         style={{
@@ -354,6 +354,6 @@ export const RoadMap = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

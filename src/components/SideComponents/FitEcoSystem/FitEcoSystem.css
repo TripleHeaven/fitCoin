@@ -1,9 +1,13 @@
 .eco__content {
     max-width: 1500px;
-    padding: 0 300px;
+    /* padding: 0 150px; */
 }
 
-
+@media screen and (max-width: 1800px) {
+    .eco__content {
+        padding: 0 150px;
+    }
+}
 
 @media screen and (max-width: 1060px) {
     .eco__img {

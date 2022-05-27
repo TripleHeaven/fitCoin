@@ -11,7 +11,7 @@ export const Wrapper: React.FC<{ children?: React.ReactNode }> = ({
       backgroundColor: "#F7F8F9",
     }}
   >
-    <div className="pb-[64px]">
+    <div className="pb-[64px] relative">
       <Sidebar />
       {children}
     </div>

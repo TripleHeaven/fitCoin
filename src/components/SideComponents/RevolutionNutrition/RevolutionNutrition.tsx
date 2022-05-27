@@ -2,13 +2,14 @@ import { Button, ButtonSizes, ButtonVariants } from "components/Button";
 import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
 import { useDesktopProvider } from "hooks/useDesktopContext";
+import "./RevolutionNutrition.css"
 
 export const RevolutionNutrition = () => {
   const { isDesktop } = useDesktopProvider();
 
   return (
     <div
-      className="px-[12px] mt-[80px] "
+      className="px-[12px] mt-[80px] relative"
       style={
         !isDesktop
           ? {
@@ -20,7 +21,7 @@ export const RevolutionNutrition = () => {
           : { position: "relative" }
       }
     >
-      <div className="">
+      <div className="max-w-[1400px] m-auto">
         <Title className="text-center text-gray-300" variant={TitleVariant.h2}>
           Revolution nutrition
         </Title>
@@ -29,9 +30,10 @@ export const RevolutionNutrition = () => {
           className="mt-[40px] mx-auto sm:hidden"
         ></img>
         {isDesktop && (
-          <div className="flex w-screen relative">
-            <div className=" flex mx-auto gap-[64px] mt-[64px]">
+          <div className="flex w-full relative">
+            <div className=" flex flex-wrap justify-center mx-auto gap-[64px] mt-[64px]">
               <img
+                className="revolution__img"
                 src="./icons/linesDesk.svg"
                 style={{
                   position: "absolute",
@@ -69,8 +71,8 @@ export const RevolutionNutrition = () => {
             </div>
           </div>
         )}
-        <div className="sm:flex">
-          <div className="flex flex-col gap-[20px] sm:ml-[200px] sm:mt-[64px]">
+        <div className="sm:flex revolution__footer">
+          <div className="my-6">
             <div className="flex">
               <img src="./icons/Rn1.svg" />
               <Paragraph className="ml-[16px] my-auto text-[16px]">
@@ -90,11 +92,11 @@ export const RevolutionNutrition = () => {
               </Paragraph>
             </div>
           </div>
-          <div className="flex w-full mt-[48px] sm:my-auto">
+          <div className="mt-[48px]">
             <Button
               variant={ButtonVariants.gradientInverted}
               size={isDesktop ? ButtonSizes.xl : undefined}
-              className="mx-auto sm:ml-auto sm:mr-[250px]"
+              className="revolution__footer-button"
             >
               <div className="flex">
                 learn more

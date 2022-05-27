@@ -2,6 +2,7 @@ import { Button, ButtonSizes, ButtonVariants } from "components/Button";
 import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
 import { useDesktopProvider } from "hooks/useDesktopContext";
+import "./Hero.css"
 
 export const Hero = () => {
   const { isDesktop } = useDesktopProvider();
@@ -48,7 +49,7 @@ export const Hero = () => {
             </div>
           </Button>
           <img
-            className=" hidden sm:block sm:absolute sm:right-[0] sm:bottom-[20px] sm:right-[250px] sm:w-[600px]"
+            className="hero__img"
             src="./icons/TwoCoins.png"
           />
         </div>

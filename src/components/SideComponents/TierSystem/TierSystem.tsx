@@ -7,7 +7,7 @@ export const TierSystem = () => {
 
   return (
     <div className="px-[12px] sm:px-[140px] mt-[80px]">
-      <div className="">
+      <div className="max-w-[1100px] m-auto">
         <Title className="text-center text-gray-300" variant={TitleVariant.h2}>
           tier system
         </Title>
@@ -24,8 +24,9 @@ export const TierSystem = () => {
               <img src="./icons/Tier2Mobile.png" className="mt-[32px] w-full" />
             </>
           ) : (
-            <div className="flex px-[500px]">
+            <div className="flex justify-center">
               <img
+                className="w-full"
                 src="./icons/tierDesktop.png"
                 style={{
                   marginLeft: "",
@@ -37,7 +38,7 @@ export const TierSystem = () => {
             </div>
           )}
         </div>
-        <div className="flex w-full mt-[48px] sm:px-[auto]]">
+        <div className="flex w-full mt-[48px] sm:flex-wrap sm:justify-center sm:px-[auto]]">
           {isDesktop && (
             <img
               src="./icons/tier2Desktop.png"
@@ -52,9 +53,9 @@ export const TierSystem = () => {
           <Button
             variant={ButtonVariants.gradientInverted}
             size={isDesktop ? ButtonSizes.xl : undefined}
-            className="mx-auto sm:my-auto"
+            className="mx-auto sm:my-auto  sm:mt-[50px]"
           >
-            <div className="flex ">
+            <div className="flex">
               participate
               <img className="ml-[16px]" src="./icons/arrowRightGr.svg" />
             </div>

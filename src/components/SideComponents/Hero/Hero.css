@@ -1,0 +1,16 @@
+.hero__img {
+  /* background: #333; */
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 450px;
+  height: 450px;
+}
+
+
+@media screen and (max-width: 1200px) {
+.hero__img {
+    display: none;
+}
+
+}

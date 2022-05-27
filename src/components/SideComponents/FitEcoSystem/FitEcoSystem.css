@@ -1,0 +1,17 @@
+.eco__content {
+    max-width: 1500px;
+    padding: 0 300px;
+}
+
+
+
+@media screen and (max-width: 1060px) {
+    .eco__img {
+        display: none;
+    }
+    .eco__content {
+        padding: 0 60px;
+    }
+    /* flex sm:m-auto px-[16px] sm:max-w-[600px] */
+}
+    

@@ -1,0 +1,21 @@
+.revolution__img {
+    display: none;
+}
+.revolution__footer {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+    .revolution__footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .revolution__footer-button {
+        margin: auto;
+        /* margin-top: 20px; */
+    }
+    }

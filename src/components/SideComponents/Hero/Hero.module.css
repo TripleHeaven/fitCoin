@@ -1,0 +1,17 @@
+.wrapper {
+  position: relative;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/public/main/hero/heroBg.png");
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper {
+    background-image: url("/public/main/hero/heroMobile.png");
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%;
+  }
+}

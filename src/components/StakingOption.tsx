@@ -7,8 +7,6 @@ interface StakingOption {
 }
 
 export const StakingOption = ({ img, text }: StakingOption) => {
-  const { isDesktop } = useDesktopProvider();
-
   return (
     <div
       className="bg-[white] p-[16px] rounded-[16px] flex flex-col"

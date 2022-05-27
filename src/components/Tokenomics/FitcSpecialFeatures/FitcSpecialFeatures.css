@@ -1,0 +1,7 @@
+@media screen and (max-width: 900px) {
+    .fitc__footer {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

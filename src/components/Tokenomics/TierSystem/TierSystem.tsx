@@ -1,10 +1,11 @@
 import { Button, ButtonVariants } from "components/Button";
 import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
+import "./TierSystem.css"
 
 export const TierSystem = () => {
   return (
-    <div className="relative px-[16px] mt-[80px]">
+    <section className="relative px-[16px] mt-[80px]">
       {/* <img
           src="./icons/sixDots.svg"
           style={{
@@ -14,7 +15,8 @@ export const TierSystem = () => {
             zIndex: "0",
           }}
         /> */}
-      <div className="text-center items-center">
+        <div className="max-w-[900px] m-auto">
+          <div className="text-center items-center">
         <div className="">
           <Title className="text-gray-300" variant={TitleVariant.h1}>
             tier system
@@ -25,7 +27,7 @@ export const TierSystem = () => {
           </Paragraph>
         </div>
       </div>
-      <div className="flex flex-col gap-[24px] mt-[32px]">
+      <div className="flex flex-col gap-[24px] mt-[32px] px-[20px]">
         <div className="relative">
           <img
             style={{ position: "absolute", left: "-18px", top: "-40px" }}
@@ -56,8 +58,18 @@ export const TierSystem = () => {
           <Paragraph>Get new updated NFTs every month</Paragraph>
         </div>
       </div>
-      <div className="mt-[42px]">
-        <img src="./icons/tTierSysMobile.svg" className="mx-auto"></img>
+      <div className="mt-[42px] flex justify-center">
+              <img
+                className="w-full tierSystem__imgDesk"
+                src="./icons/tierDesktop.png"
+                style={{
+                  marginLeft: "",
+                  marginRight: "",
+
+                  paddingTop: "60px",
+                }}
+              />
+               <img src="./icons/TierMobile.png" className="mt-[32px] max-w-[350px] w-full tierSystem__imgMobile" />
       </div>
       <div className="flex">
         <Button variant={ButtonVariants.gradient} className="mt-[48px] mx-auto">
@@ -77,6 +89,7 @@ export const TierSystem = () => {
           }}
         ></img>
       </div>
-    </div>
+        </div>
+    </section>
   );
 };

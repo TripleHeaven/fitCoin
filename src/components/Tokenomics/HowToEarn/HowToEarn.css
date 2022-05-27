@@ -1,0 +1,22 @@
+.how__content {
+    max-width: 1150px;
+}
+
+.how__img-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 872px) {
+    .how__content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .how__img-desc {
+        display: none;
+    }
+    .how__img-mobile {
+        display: block;
+    }
+}

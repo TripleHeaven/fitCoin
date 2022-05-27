@@ -1,5 +1,6 @@
 import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
+import "./FitcSpecialFeatures.css"
 
 export const FitcSpecialFeatures = () => {
   return (
@@ -10,7 +11,7 @@ export const FitcSpecialFeatures = () => {
             Fitcoin special features
           </Title>
         </div>
-        <div className="flex flex-col gap-[23px] px-[13px] mt-[32px] text-left">
+        <div className="flex flex-col gap-[23px] px-[13px] mt-[32px] text-left m-auto max-w-[760px]">
           <div>
             <div className="flex ">
               <img src="./icons/fcmOpt1.svg" />
@@ -18,7 +19,7 @@ export const FitcSpecialFeatures = () => {
                 pure cryptocurrency
               </Paragraph>
             </div>
-            <img src="./icons/lineOpt.svg" className="mt-[12px]"></img>
+            <img src="./icons/lineOpt.svg" className="mt-[12px] w-full"></img>
           </div>
 
           <div>
@@ -28,7 +29,7 @@ export const FitcSpecialFeatures = () => {
                 limited supply which helps preserve FITC value{" "}
               </Paragraph>
             </div>
-            <img src="./icons/lineOpt.svg" className="mt-[12px]"></img>
+            <img src="./icons/lineOpt.svg" className="mt-[12px] w-full"></img>
           </div>
 
           <div>
@@ -38,7 +39,7 @@ export const FitcSpecialFeatures = () => {
                 fractionally divisible
               </Paragraph>
             </div>
-            <img src="./icons/lineOpt.svg" className="mt-[12px]"></img>
+            <img src="./icons/lineOpt.svg" className="mt-[12px] w-full"></img>
           </div>
 
           <div>
@@ -48,7 +49,7 @@ export const FitcSpecialFeatures = () => {
                 non-inflationary in the long run so its value can’t be stealed
               </Paragraph>
             </div>
-            <img src="./icons/lineOpt.svg" className="mt-[12px]"></img>
+            <img src="./icons/lineOpt.svg" className="mt-[12px] w-full"></img>
           </div>
 
           <div>
@@ -58,27 +59,26 @@ export const FitcSpecialFeatures = () => {
                 fungible and transferable{" "}
               </Paragraph>
             </div>
-            <img src="./icons/lineOpt.svg" className="mt-[12px]"></img>
+            <img src="./icons/lineOpt.svg" className="mt-[12px] w-full"></img>
           </div>
 
           <div>
             <div className="flex ">
               <img src="./icons/fcmOpt6.svg" />
               <Paragraph className="ml-[16px] my-auto text-[18px]">
-                Can be traded on centralized (CEX) and Decentralized (DEX)
+                can be traded on centralized (CEX) and Decentralized (DEX)
                 cryptocurrency exchanges{" "}
               </Paragraph>
             </div>
-            <img src="./icons/lineOpt.svg" className="mt-[12px]"></img>
+            <img src="./icons/lineOpt.svg" className="mt-[12px] w-full"></img>
           </div>
         </div>
-        <div className="text-center px-[12px] mt-[12px] pb-[24px]">
-          <Paragraph>Token contract address</Paragraph>
+        <div className="text-center px-[12px] mt-[56px] mb-[30px] pb-[24px] flex justify-center fitc__footer">
+          <Paragraph className="text-[24px]">Token contract address:</Paragraph>
           <div
-            className="pt-[12px] px-[12px]"
-            style={{ overflowWrap: "break-word" }}
+            style={{ overflowWrap: "break-word", textDecoration: "underline" }}
           >
-            <a href={"test"}>0x90E3C7e03EEab5a8D440fA6d0f8d232FFfc9C225</a>
+            <a href={"test"} className="text-[#330867] text-[24px] break-all">&nbsp;0x90E3C7e03EEab5a8D440fA6d0f8d232FFfc9C225</a>
           </div>
         </div>
         <img

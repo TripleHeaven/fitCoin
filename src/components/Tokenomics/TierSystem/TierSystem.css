@@ -1,0 +1,11 @@
+.tierSystem__imgMobile {
+    display: none;
+}
+@media screen and (max-width: 872px) {
+    .tierSystem__imgDesk {
+        display: none;
+    }
+    .tierSystem__imgMobile {
+        display: block;
+    }
+}

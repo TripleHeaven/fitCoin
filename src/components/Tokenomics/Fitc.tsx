@@ -13,7 +13,7 @@ export const Fitc = () => {
           top: "15px",
         }}
       ></img>
-      <div className="text-center items-center">
+      <div className="text-center items-center max-w-[1000px] px-[20px] m-auto">
         <div className="px-[20px]">
           <Title className="text-gray-300 px-[16px]" variant={TitleVariant.h1}>
             fitc token

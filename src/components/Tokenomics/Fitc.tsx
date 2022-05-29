@@ -1,6 +1,7 @@
 import { Button, ButtonVariants } from "components/Button";
 import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
+import { Links } from "utils";
 
 export const Fitc = () => {
   return (
@@ -30,7 +31,11 @@ export const Fitc = () => {
           </Paragraph>
         </div>
 
-        <Button variant={ButtonVariants.gradientInverted} className="mt-[48px]">
+        <Button
+          variant={ButtonVariants.gradientInverted}
+          onClick={() => window.open(Links.WHITE_PAPER)}
+          className="mt-[48px]"
+        >
           <div className="flex">
             white paper
             <img className="ml-[16px] " src="./icons/arrowRightGr.svg" />

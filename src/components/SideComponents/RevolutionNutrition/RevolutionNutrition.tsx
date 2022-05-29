@@ -2,6 +2,7 @@ import { Button, ButtonSizes, ButtonVariants } from "components/Button";
 import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
 import { useDesktopProvider } from "hooks/useDesktopContext";
+import { Links, Routes } from "utils";
 import "./RevolutionNutrition.css";
 
 export const RevolutionNutrition = () => {
@@ -97,6 +98,7 @@ export const RevolutionNutrition = () => {
               variant={ButtonVariants.gradientInverted}
               size={isDesktop ? ButtonSizes.xl : undefined}
               className="revolution__footer-button"
+              onClick={() => window.open(Routes.REVOLUTION_NUTRITION)}
             >
               <div className="flex">
                 learn more

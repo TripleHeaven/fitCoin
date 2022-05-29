@@ -5,6 +5,7 @@ import { StakingOption } from "components/StakingOption";
 import { Title, TitleVariant } from "components/Title";
 import { useDesktopProvider } from "hooks/useDesktopContext";
 import { useState } from "react";
+import { Links } from "utils";
 import "./Staking.css";
 
 export const Staking = () => {
@@ -42,6 +43,7 @@ export const Staking = () => {
           <Button
             variant={ButtonVariants.gradient}
             size={isDesktop ? ButtonSizes.xl : undefined}
+            onClick={() => window.open(Links.BSC_LINK)}
             className="m-auto"
           >
             <div className="flex">

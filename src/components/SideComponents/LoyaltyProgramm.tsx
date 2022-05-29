@@ -5,6 +5,7 @@ import { StakingOption } from "components/StakingOption";
 import { Title, TitleVariant } from "components/Title";
 import { useDesktopProvider } from "hooks/useDesktopContext";
 import { useState } from "react";
+import { Links } from "utils";
 
 export const LoyaltyProgramm = () => {
   const { isDesktop } = useDesktopProvider();
@@ -29,6 +30,7 @@ export const LoyaltyProgramm = () => {
             variant={ButtonVariants.gradient}
             size={isDesktop ? ButtonSizes.xl : undefined}
             className="mx-auto"
+            onClick={() => window.open(Links.BSC_LINK)}
           >
             <div className="flex">
               get started

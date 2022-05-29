@@ -5,8 +5,8 @@ import { Referal } from "components/Revolution/referal";
 import { Utility } from "components/Revolution/utility";
 import { Ways } from "components/Revolution/ways";
 import { Wrapper } from "components/Wrapper";
-import '../styles/globals.css';
-
+import { Links } from "utils";
+import "../styles/globals.css";
 
 export const Revolution = () => (
   <Wrapper>
@@ -21,6 +21,7 @@ export const Revolution = () => (
           className="max-w-[733px] w-full text-[18px] md:text-[32px] flex justify-center items-center text-center mt-3"
           variant={ButtonVariants.gradientInverted}
           size={ButtonSizes.lg}
+          onClick={() => window.open(Links.REVOLUTION_NUTRITION)}
         >
           <span>Visit Our Shop &#8594;</span>
         </Button>

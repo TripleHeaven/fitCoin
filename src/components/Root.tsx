@@ -3,12 +3,13 @@ import { Main } from "routes/Main";
 import { Team } from "routes/Team";
 import { Tokenomics } from "routes/Tokenomics";
 import { Revolution } from "routes/Revolution";
+import { Routes } from "utils";
 
 export const Root = () => (
   <Switch>
-    <Route exact path={"/"} component={Main} />
-    <Route exact path={"/tokenomics"} component={Tokenomics} />
-    <Route exact path={"/team"} component={Team} />
-    <Route exact path={"/revolution"} component={Revolution} />
+    <Route exact path={Routes.MAIN} component={Main} />
+    <Route exact path={Routes.TOKENOMICS} component={Tokenomics} />
+    <Route exact path={Routes.TEAM} component={Team} />
+    <Route exact path={Routes.REVOLUTION_NUTRITION} component={Revolution} />
   </Switch>
 );

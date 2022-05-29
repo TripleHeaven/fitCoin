@@ -3,6 +3,7 @@ import { Button, ButtonSizes, ButtonVariants } from "components/Button";
 import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
 import { useDesktopProvider } from "hooks/useDesktopContext";
+import { Links } from "utils";
 import styles from "./Hero.module.css";
 
 export const Hero = () => {
@@ -29,7 +30,11 @@ export const Hero = () => {
 
         <div className="flex flex-col sm:block w-full items-center   mt-[48px] sm:mt-[64px]">
           <div className="flex w-full lg:block lg:w-auto">
-            <Button variant={ButtonVariants.gradient} className="mx-auto">
+            <Button
+              variant={ButtonVariants.gradient}
+              className="mx-auto"
+              onClick={() => window.open(Links.BSC_LINK)}
+            >
               <div className="flex">
                 launch app
                 <img className="ml-[16px]" src="./icons/arrowRight.svg" />

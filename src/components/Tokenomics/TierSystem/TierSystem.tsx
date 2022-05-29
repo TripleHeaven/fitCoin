@@ -1,6 +1,7 @@
 import { Button, ButtonVariants } from "components/Button";
 import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
+import { Links } from "utils";
 import "./TierSystem.css";
 
 export const TierSystem = () => {
@@ -78,6 +79,7 @@ export const TierSystem = () => {
           <Button
             variant={ButtonVariants.gradient}
             className="mt-[48px] mx-auto"
+            onClick={() => window.open(Links.BSC_LINK)}
           >
             <div className="flex">
               go to staking app

@@ -1,7 +1,8 @@
 import { Button, ButtonSizes, ButtonVariants } from "components/Button";
 import { Title, TitleVariant } from "components/Title";
 import { useDesktopProvider } from "hooks/useDesktopContext";
-import "./TierSystem.css"
+import { Links } from "utils";
+import "./TierSystem.css";
 
 export const TierSystem = () => {
   const { isDesktop } = useDesktopProvider();
@@ -51,16 +52,17 @@ export const TierSystem = () => {
             />
           )}
           <div className="mt-[50px]">
-          <Button
-            variant={ButtonVariants.gradientInverted}
-            size={isDesktop ? ButtonSizes.xl : undefined}
-            className="mx-auto sm:my-auto  sm:mt-[50px]"
-          >
-            <div className="flex">
-              participate
-              <img className="ml-[16px]" src="./icons/arrowRightGr.svg" />
-            </div>
-          </Button>
+            <Button
+              variant={ButtonVariants.gradientInverted}
+              size={isDesktop ? ButtonSizes.xl : undefined}
+              className="mx-auto sm:my-auto  sm:mt-[50px]"
+              onClick={() => window.open(Links.BSC_LINK)}
+            >
+              <div className="flex">
+                participate
+                <img className="ml-[16px]" src="./icons/arrowRightGr.svg" />
+              </div>
+            </Button>
           </div>
         </div>
       </div>

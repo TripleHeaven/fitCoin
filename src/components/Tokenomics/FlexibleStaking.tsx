@@ -1,6 +1,7 @@
 import { Button, ButtonVariants } from "components/Button";
 import { Paragraph } from "components/Paragraph";
 import { Title, TitleVariant } from "components/Title";
+import { Links } from "utils";
 
 export const FlexibleStaking = () => {
   return (
@@ -51,7 +52,11 @@ export const FlexibleStaking = () => {
             className="mx-auto mt-[48px]"
           />
         </div>
-        <Button variant={ButtonVariants.gradient} className="mt-[48px]">
+        <Button
+          variant={ButtonVariants.gradient}
+          className="mt-[48px]"
+          onClick={() => window.open(Links.BSC_LINK)}
+        >
           <div className="flex">
             go to staking app
             <img className="ml-[16px] " src="./icons/arrowRight.svg" />
